@@ -18,7 +18,7 @@ public class TailEffect {
 	private final Queue<Vector3f> points = new LinkedList<>();
 	private final float r;
 	/**
-	 * <p>参数：边数（效果越大越好，但更吃性能），最大长度，最大半径，径头部颜色，尾部颜色<p>
+	 * <p>参数：边数（效果越大越好，但更吃性能），最大长度，最大半径，头部颜色，尾部颜色<p>
 	 * */
 	public TailEffect(int sides,int maxlength,float r,Color color1,Color color2) {
 		this.sides=sides;

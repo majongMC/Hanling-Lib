@@ -5,13 +5,13 @@ import org.joml.Vector3f;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.util.Mth;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 /**
  * <p>用于在世界中渲染指定图形</p>
  * */
-@Environment(value=EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class RenderShapeInLevel {
 	/**
 	 * <p>渲染棱台</p>

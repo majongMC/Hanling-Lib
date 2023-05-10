@@ -2,16 +2,16 @@ package majongmc.hllib.client.animation;
 
 import org.joml.Vector3f;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.entity.AnimationState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 /**
  * <p>对1.19新动画系统的拓展，将其适用范围由HierarchicalModel扩展到所有实体模型</p>
  * <p>该动画系统的用法可参考监守者相关代码{@link net.minecraft.client.model.WardenModel}</p>
  * */
-@Environment(value=EnvType.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class AnimatePlayer {
 	private static final Vector3f ANIMATION_VECTOR_CACHE = new Vector3f();
 	/**

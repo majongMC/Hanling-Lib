@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import majongmc.hllib.client.event.ClientTickEvent;
-import majongmc.hllib.common.event.ServerTickEvent;
-
+import net.minecraftforge.event.TickEvent.ClientTickEvent;
+import net.minecraftforge.event.TickEvent.Phase;
+import net.minecraftforge.event.TickEvent.ServerTickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+@Mod.EventBusSubscriber()
 public class TickManager {
 	private static final List<ITickable> SERVER_TICKER_POOL=new ArrayList<ITickable>();
 	private static final List<ITickable> CLIENT_TICKER_POOL=new ArrayList<ITickable>();
@@ -14,7 +17,10 @@ public class TickManager {
 	private static final List<ITickable> server_remove=new ArrayList<ITickable>();
 	private static final List<ITickable> client_add=new ArrayList<ITickable>();
 	private static final List<ITickable> server_add=new ArrayList<ITickable>();
+	@SubscribeEvent
 	public static void onServerTick(ServerTickEvent event) {
+		if(event.phase==Phase.START)
+			return;
 		if(!server_add.isEmpty()) {
 			Iterator<ITickable> rem=server_add.iterator();
 			while(rem.hasNext()) {
@@ -34,7 +40,10 @@ public class TickManager {
 			server_remove.clear();
 		}
 	}
+	@SubscribeEvent
 	public static void onClientTick(ClientTickEvent event) {
+		if(event.phase==Phase.START)
+			return;
 		if(!client_add.isEmpty()) {
 			Iterator<ITickable> rem=client_add.iterator();
 			while(rem.hasNext()) {

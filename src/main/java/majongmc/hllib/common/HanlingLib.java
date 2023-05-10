@@ -1,18 +1,10 @@
 package majongmc.hllib.common;
 
-import majongmc.hllib.common.event.EventBus;
-import majongmc.hllib.common.init.EventRegister;
-import majongmc.hllib.common.init.FabricEventRegister;
-import net.fabricmc.api.ModInitializer;
-
-public class HanlingLib implements ModInitializer{
+import net.minecraftforge.fml.common.Mod;
+@Mod(HanlingLib.MOD_ID)
+public class HanlingLib{
 	public static final String MOD_ID="hllib";
-	@Override
-	public void onInitialize() {
-		EventBus bus=EventBus.getModEventBus();
-		EventRegister.register(bus);
-		FabricEventRegister.register();
-		//debug
+	public HanlingLib() {
 	}
 
 }

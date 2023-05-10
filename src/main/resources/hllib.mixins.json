@@ -3,22 +3,12 @@
   "minVersion": "0.8",
   "package": "majongmc.hllib.mixin",
   "compatibilityLevel": "JAVA_17",
+  "refmap": "hllib.refmap.json",
   "mixins": [
-  	"common.EntityMixin",
-  	"common.MobMixin",
-  	"common.MobAccessor",
-  	"common.BowItemMixin",
-  	"common.ProjectileMixin",
-  	"common.LivingEntityMixin",
-  	"common.PlayerMixin",
-  	"common.ItemStackMixin",
-  	"common.DamageSourcesInvoker",
-  	"common.PlayerListMixin"
+  	"common.DamageSourcesInvoker"
   ],
   "client": [
-    "client.GuiMixin",
-    "client.GameRendererMixin",
-    "client.CameraAccessor"
+    
   ],
   "injectors": {
     "defaultRequire": 1

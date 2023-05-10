@@ -1,0 +1,13 @@
+modLoader="javafml" #mandatory
+loaderVersion="[41,)" 
+license="MIT"
+[[mods]] 
+modId="hllib" 
+version="${file.jarVersion}" 
+displayName="Hanling Lib" 
+authors="MajongMC"
+displayURL="https://github.com/majongMC/Hanling-Lib"
+logoFile="assets/hllib/icon.png"
+description='''
+A lib which can provide some useful API.
+'''

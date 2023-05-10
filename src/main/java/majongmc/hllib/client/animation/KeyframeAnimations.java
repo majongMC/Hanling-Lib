@@ -6,14 +6,14 @@ import java.util.Optional;
 
 import org.joml.Vector3f;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.util.Mth;
-@Environment(value=EnvType.CLIENT)
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+@OnlyIn(Dist.CLIENT)
 public class KeyframeAnimations {
 	public static void animate(ModelPart root, AnimationDefinition p_232321_, long p_232322_, float p_232323_, Vector3f p_232324_) {
 	      float f = getElapsedSeconds(p_232321_, p_232322_);
