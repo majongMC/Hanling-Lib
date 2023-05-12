@@ -1,5 +1,7 @@
 package majongmc.hllib.common.skill;
-
+/**
+ * <p>空闲技能，此技能会让生物休息一段时间，不会在这期间使用其他技能，输入的参数为：技能所有者，技能ID，空闲的tick叔</p>
+ * */
 public class IdleSkill extends Skill{
 	private int process=0;
 	private final int idletime;

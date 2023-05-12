@@ -1,5 +1,7 @@
 package majongmc.hllib.client.render;
-
+/**
+ * <p>类似java.awt中的Color类，但不依赖java.awt，以防止出现问题</p>
+ * */
 public class Color {
     public static final Color WHITE = new Color(255, 255, 255);
     public static final Color LIGHT_GRAY = new Color(192, 192, 192);

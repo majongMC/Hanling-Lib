@@ -7,7 +7,11 @@ import java.util.function.Supplier;
 import majongmc.hllib.common.event.EventBus;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
-
+/**
+ * <p>移植了Forge的延迟注册器</p>
+ * <p>注意：虽然是移植的Forge的延迟注册器，但不是真的延迟注册，在主类中调用Register时就会注册</p>
+ * <p>因此需要注意你的注册顺序，建议的注册顺序为：实体->方块->物品</p>
+ * */
 public class DeferredRegister<T> {
 	private String modid;
 	private Registry<T> registry;
