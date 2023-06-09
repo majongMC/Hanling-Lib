@@ -18,6 +18,9 @@ public class Color {
     public static final Color BLUE = new Color(0, 0, 255);
 	private int value;
 	
+	public Color(int value) {
+        this.value=value;
+    }
 	public Color(int r, int g, int b) {
         this(r, g, b, 255);
     }
@@ -29,6 +32,9 @@ public class Color {
     }
 	public int getRGB() {
         return value;
+    }
+	public int getRGBNOAlpha() {
+        return value&16777215;
     }
 	public int getRed() {
         return (getRGB() >> 16) & 0xFF;
@@ -42,5 +48,16 @@ public class Color {
     public int getAlpha() {
         return (getRGB() >> 24) & 0xff;
     }
-    
+    public float getRedfloat() {
+        return getRed()/255F;
+    }
+    public float getGreenfloat() {
+        return getGreen()/255F;
+    }
+    public float getBluefloat() {
+        return getBlue()/255F;
+    }
+    public float getAlphafloat() {
+        return getAlpha()/255F;
+    }
 }

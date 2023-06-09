@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.Mod;
 public class HanlingLib{
 	public static final String MOD_ID="hllib";
 	public HanlingLib() {
+		
 	}
 
 }

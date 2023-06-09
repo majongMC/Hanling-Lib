@@ -8,7 +8,7 @@
   	"common.DamageSourcesInvoker"
   ],
   "client": [
-    
+    "client.BossHealthOverlayMixin"
   ],
   "injectors": {
     "defaultRequire": 1

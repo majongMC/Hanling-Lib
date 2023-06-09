@@ -16,7 +16,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 apply plugin: 'org.spongepowered.mixin'
-version = '194.0.1.0'
+version = '194.0.2.0'
 group = 'majongmc.hllib' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'hllib-1.19.4-forge'
 

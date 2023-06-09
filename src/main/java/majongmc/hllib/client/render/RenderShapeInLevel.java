@@ -22,10 +22,10 @@ public class RenderShapeInLevel {
 		Vector3f normal=new Vector3f(p2).sub(p1);
 		Circle c1=new Circle(p1,normal,r1);
 		Circle c2=new Circle(p2,normal2,r2);
-		float[] rgba1= {color1.getRed()/255F,color1.getGreen()/255F,color1.getBlue()/255F,color1.getAlpha()/255F};
-		float[] rgba2= {color2.getRed()/255F,color2.getGreen()/255F,color2.getBlue()/255F,color2.getAlpha()/255F};
+		float[] rgba1= {color1.getRedfloat(),color1.getGreenfloat(),color1.getBluefloat(),color1.getAlphafloat()};
+		float[] rgba2= {color2.getRedfloat(),color2.getGreenfloat(),color2.getBluefloat(),color2.getAlphafloat()};
+		float deltasita=2*Mth.PI/n;
 		for(int i=0;i<n;i++) {
-			float deltasita=2*Mth.PI/n;
 			Vector3f v1=c1.getPointOnCircle(deltasita*(i+1));
 			Vector3f v2=c1.getPointOnCircle(deltasita*i);
 			Vector3f v3=c2.getPointOnCircle(deltasita*i);
