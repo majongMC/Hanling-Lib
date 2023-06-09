@@ -18,6 +18,8 @@
   "client": [
     "client.GuiMixin",
     "client.GameRendererMixin",
+    "client.ButtonBuilderAccessor",
+    "client.BossHealthOverlayMixin",
     "client.CameraAccessor"
   ],
   "injectors": {

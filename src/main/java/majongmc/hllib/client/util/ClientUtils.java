@@ -26,7 +26,7 @@ public class ClientUtils {
 	public static int getfps() {
 		return Minecraft.getInstance().getFps();
 	}
-	public static double fpsratio() {
-		return getfps()/60.0;
+	public static float fpsratio() {
+		return getfps()/60.0F;
 	}
 }
